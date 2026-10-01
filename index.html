@@ -1,0 +1,1407 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mark Jayson Santos | Senior QC Analyst & Analytics Portfolio</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;600&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Chart.js for Interactive Analytics Visualizations -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            dark: '#0d0f17',
+                            card: '#151824',
+                            border: '#242a3d',
+                            accent: '#f59e0b', // Sunset Orange/Amber
+                            accentHover: '#d97706',
+                            gold: '#eab308',
+                            cyan: '#06b6d4',
+                            text: '#f1f5f9',
+                            muted: '#94a3b8'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        mono: ['Fira Code', 'monospace']
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            background-color: #0d0f17;
+            color: #f1f5f9;
+        }
+        .glow-accent {
+            box-shadow: 0 0 25px -5px rgba(245, 158, 11, 0.25);
+        }
+        .glow-card:hover {
+            box-shadow: 0 10px 30px -10px rgba(245, 158, 11, 0.15);
+            border-color: rgba(245, 158, 11, 0.4);
+        }
+        /* Custom scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #0d0f17;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #242a3d;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #f59e0b;
+        }
+    </style>
+</head>
+<body class="bg-brand-dark text-slate-100 font-sans antialiased selection:bg-brand-accent selection:text-black">
+
+    <!-- Top Sticky Navigation Bar -->
+    <nav class="fixed top-0 left-0 w-full z-50 bg-brand-dark/90 backdrop-blur-md border-b border-brand-border/60 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <!-- Logo / Name -->
+                <a href="#home" class="flex items-center gap-3 group">
+                    <div class="w-9 h-9 rounded-lg bg-gradient-to-br from-brand-accent to-amber-600 flex items-center justify-center font-bold text-black text-lg shadow-md group-hover:scale-105 transition-transform">
+                        MS
+                    </div>
+                    <div>
+                        <span class="font-bold text-slate-100 text-sm sm:text-base tracking-tight block">MARK JAYSON SANTOS</span>
+                        <span class="text-[10px] text-brand-accent font-mono tracking-widest uppercase block -mt-1">QC & AI</span>
+                    </div>
+                </a>
+
+                <!-- Desktop Navigation Links -->
+                <div class="hidden lg:flex items-center space-x-1 text-xs font-medium text-slate-300">
+                    <a href="#home" class="px-2.5 py-1.5 rounded-lg hover:text-brand-accent hover:bg-slate-800/60 transition-all duration-200">Home</a>
+                    <a href="#about" class="px-2.5 py-1.5 rounded-lg hover:text-brand-accent hover:bg-slate-800/60 transition-all duration-200">About</a>
+                    <a href="#experience" class="px-2.5 py-1.5 rounded-lg hover:text-brand-accent hover:bg-slate-800/60 transition-all duration-200">Experience</a>
+                    <a href="#analytics" class="px-2.5 py-1.5 rounded-lg hover:text-brand-accent hover:bg-slate-800/60 transition-all duration-200">Analytics</a>
+                    <a href="#cat-modeling" class="px-2.5 py-1.5 rounded-lg hover:text-brand-accent hover:bg-slate-800/60 transition-all duration-200">CAT Risk</a>
+                    <a href="#qc-analytics" class="px-2.5 py-1.5 rounded-lg hover:text-brand-accent hover:bg-slate-800/60 transition-all duration-200">QC & Process</a>
+                    <a href="#ai-automation" class="px-2.5 py-1.5 rounded-lg hover:text-brand-accent hover:bg-slate-800/60 transition-all duration-200">AI & Auto</a>
+                    <a href="#projects" class="px-2.5 py-1.5 rounded-lg hover:text-brand-accent hover:bg-slate-800/60 transition-all duration-200">Projects</a>
+                    <a href="#skills" class="px-2.5 py-1.5 rounded-lg hover:text-brand-accent hover:bg-slate-800/60 transition-all duration-200">Skills</a>
+                    <a href="#contact" class="px-2.5 py-1.5 rounded-lg hover:text-brand-accent hover:bg-slate-800/60 transition-all duration-200">Contact</a>
+                </div>
+
+                <!-- Action Button & Mobile Toggle -->
+                <div class="flex items-center gap-2.5">
+                    <a href="https://drive.google.com/file/d/1MVhywZZbEjEFEkP6eEDy8A3-Pez3IwT_/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="hidden sm:inline-flex items-center gap-2 text-xs font-semibold px-3.5 py-1.5 rounded-lg bg-brand-accent/10 text-brand-accent border border-brand-accent/30 hover:bg-brand-accent hover:text-black transition-all duration-200 shadow-sm">
+                        <i class="fa-solid fa-file-pdf"></i> Resume
+                    </a>
+                    <button id="mobileMenuBtn" class="lg:hidden p-2 rounded-lg bg-brand-card border border-brand-border text-slate-300 hover:text-white hover:border-slate-600 transition">
+                        <i class="fa-solid fa-bars text-base"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Drawer Menu -->
+        <div id="mobileMenu" class="hidden lg:hidden bg-brand-card/95 backdrop-blur-xl border-b border-brand-border px-4 pt-3 pb-6 space-y-1.5 text-xs font-medium">
+            <a href="#home" class="block py-2 px-3 rounded-lg hover:bg-brand-border/60 hover:text-brand-accent text-slate-200 transition">Home</a>
+            <a href="#about" class="block py-2 px-3 rounded-lg hover:bg-brand-border/60 hover:text-brand-accent text-slate-200 transition">About</a>
+            <a href="#experience" class="block py-2 px-3 rounded-lg hover:bg-brand-border/60 hover:text-brand-accent text-slate-200 transition">Work Experience</a>
+            <a href="#analytics" class="block py-2 px-3 rounded-lg hover:bg-brand-border/60 hover:text-brand-accent text-slate-200 transition">Data Analytics</a>
+            <a href="#cat-modeling" class="block py-2 px-3 rounded-lg hover:bg-brand-border/60 hover:text-brand-accent text-slate-200 transition">Catastrophe Modeling</a>
+            <a href="#qc-analytics" class="block py-2 px-3 rounded-lg hover:bg-brand-border/60 hover:text-brand-accent text-slate-200 transition">QC Analytics</a>
+            <a href="#ai-automation" class="block py-2 px-3 rounded-lg hover:bg-brand-border/60 hover:text-brand-accent text-slate-200 transition">AI & Automation</a>
+            <a href="#projects" class="block py-2 px-3 rounded-lg hover:bg-brand-border/60 hover:text-brand-accent text-slate-200 transition">Projects</a>
+            <a href="#skills" class="block py-2 px-3 rounded-lg hover:bg-brand-border/60 hover:text-brand-accent text-slate-200 transition">Skills</a>
+            <a href="#contact" class="block py-2 px-3 rounded-lg hover:bg-brand-border/60 hover:text-brand-accent text-slate-200 transition">Contact</a>
+            <a href="https://drive.google.com/file/d/1MVhywZZbEjEFEkP6eEDy8A3-Pez3IwT_/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="block py-2 px-3 rounded-lg bg-brand-accent/10 border border-brand-accent/30 text-brand-accent font-semibold flex items-center justify-between mt-2">
+                <span>Resume (PDF)</span>
+                <i class="fa-solid fa-arrow-up-right-from-square text-xs"></i>
+            </a>
+        </div>
+    </nav>
+
+    <!-- 1. HOME / HERO SECTION -->
+    <section id="home" class="pt-28 pb-16 lg:pt-36 lg:pb-24 relative overflow-hidden border-b border-brand-border/40">
+        <!-- Background Grid Pattern -->
+        <div class="absolute inset-0 opacity-10 bg-[radial-gradient(#f59e0b_1px,transparent_1px)] [background-size:24px_24px] pointer-events-none"></div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                
+                <!-- Left Column: Narrative Intro -->
+                <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
+                    <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-brand-accent/10 border border-brand-accent/30 text-brand-accent text-xs font-mono font-semibold">
+                        <span class="w-2 h-2 rounded-full bg-brand-accent animate-pulse"></span>
+                        SENIOR QUALITY CONTROL ANALYST • XCEEDANCE
+                    </div>
+
+                    <h1 class="text-3xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-white leading-tight">
+                        MARK JAYSON <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-accent via-amber-400 to-amber-200">SANTOS</span>
+                    </h1>
+
+                    <p class="text-xs sm:text-sm font-mono text-brand-accent uppercase tracking-widest">
+                        Data Analytics | Catastrophe Modeling | Quality Control | AI Automation
+                    </p>
+
+                    <p class="text-slate-300 text-base sm:text-lg max-w-2xl leading-relaxed">
+                        Turning operational and insurance data into actionable insights, smarter workflows, and automated business solutions.
+                    </p>
+
+                    <!-- CTA Buttons -->
+                    <div class="flex flex-wrap items-center justify-center lg:justify-start gap-4 pt-2">
+                        <a href="#experience" class="px-6 py-3 rounded-xl bg-brand-accent hover:bg-brand-accentHover text-black font-bold text-sm shadow-lg shadow-amber-500/10 hover:shadow-amber-500/30 transition flex items-center gap-2">
+                            <i class="fa-solid fa-briefcase"></i> Work Experience
+                        </a>
+                        <a href="#projects" class="px-6 py-3 rounded-xl bg-brand-card hover:bg-brand-border border border-brand-border text-slate-200 font-semibold text-sm transition flex items-center gap-2">
+                            <i class="fa-solid fa-chart-line text-brand-accent"></i> View Projects
+                        </a>
+                        <a href="https://drive.google.com/file/d/1MVhywZZbEjEFEkP6eEDy8A3-Pez3IwT_/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="px-6 py-3 rounded-xl bg-transparent hover:bg-brand-card text-slate-300 hover:text-white font-medium text-sm transition flex items-center gap-2 border border-brand-border">
+                            <i class="fa-solid fa-file-pdf text-brand-accent"></i> Resume PDF
+                        </a>
+                    </div>
+
+                    <!-- Strategic Storyline Ribbon -->
+                    <div class="pt-6 border-t border-brand-border/50">
+                        <p class="text-xs text-brand-muted uppercase font-mono mb-3">Professional Timeline (2021 – Present)</p>
+                        <div class="grid grid-cols-2 sm:grid-cols-4 gap-2 text-center text-xs font-mono">
+                            <div class="p-2 rounded-lg bg-brand-card border border-brand-border">
+                                <span class="text-slate-400 block text-[10px]">Stage 01</span>
+                                <span class="text-amber-400 font-bold">Data Analyst</span>
+                            </div>
+                            <div class="p-2 rounded-lg bg-brand-card border border-brand-border">
+                                <span class="text-slate-400 block text-[10px]">Stage 02</span>
+                                <span class="text-amber-400 font-bold">CAT Modeling</span>
+                            </div>
+                            <div class="p-2 rounded-lg bg-brand-card border border-brand-border">
+                                <span class="text-slate-400 block text-[10px]">Stage 03</span>
+                                <span class="text-amber-400 font-bold">Quality Control</span>
+                            </div>
+                            <div class="p-2 rounded-lg bg-brand-card border border-brand-border">
+                                <span class="text-slate-400 block text-[10px]">Stage 04</span>
+                                <span class="text-emerald-400 font-bold">AI & Automation</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Column: Interactive Metric / Executive Preview Card -->
+                <div class="lg:col-span-5">
+                    <div class="bg-brand-card rounded-2xl border border-brand-border p-6 shadow-2xl relative glow-accent">
+                        
+                        <!-- Top Card Header -->
+                        <div class="flex items-center justify-between pb-4 border-b border-brand-border">
+                            <div class="flex items-center gap-3">
+                                <div class="w-10 h-10 rounded-full bg-amber-500/20 border border-amber-500/40 flex items-center justify-center text-brand-accent font-bold">
+                                    <i class="fa-solid fa-shield-halved"></i>
+                                </div>
+                                <div>
+                                    <h3 class="text-sm font-bold text-white">Executive Portfolio Overview</h3>
+                                    <span class="text-xs text-brand-muted font-mono">QC Dashboard - CAT Modeling</span>
+                                </div>
+                            </div>
+                            <span class="text-[10px] px-2 py-1 rounded bg-green-500/20 text-green-400 font-mono border border-green-500/30">ONLINE</span>
+                        </div>
+
+                        <!-- KPI Highlight Grid -->
+                        <div class="grid grid-cols-2 gap-3 my-4">
+                            <div class="p-3 rounded-xl bg-brand-dark border border-brand-border/80">
+                                <div class="text-2xl font-extrabold text-brand-accent">99.9%</div>
+                                <div class="text-[11px] text-slate-400 font-medium">Data Integrity Target</div>
+                            </div>
+                            <div class="p-3 rounded-xl bg-brand-dark border border-brand-border/80">
+                                <div class="text-2xl font-extrabold text-white">100+</div>
+                                <div class="text-[11px] text-slate-400 font-medium">Model & Process Validations</div>
+                            </div>
+                            <div class="p-3 rounded-xl bg-brand-dark border border-brand-border/80">
+                                <div class="text-2xl font-extrabold text-brand-cyan">Power BI</div>
+                                <div class="text-[11px] text-slate-400 font-medium">DAX & KPI Dashboards</div>
+                            </div>
+                            <div class="p-3 rounded-xl bg-brand-dark border border-brand-border/80">
+                                <div class="text-2xl font-extrabold text-amber-400">Power Automate</div>
+                                <div class="text-[11px] text-slate-400 font-medium">Workflow Automation</div>
+                            </div>
+                        </div>
+
+                        <!-- Mini Interactive Chart Preview -->
+                        <div class="bg-brand-dark/90 rounded-xl p-3 border border-brand-border">
+                            <div class="flex justify-between items-center mb-2">
+                                <span class="text-[11px] font-mono text-slate-300">QC Quality Score & Audit Trend</span>
+                                <span class="text-[10px] text-brand-accent font-mono">Sample Data</span>
+                            </div>
+                            <div class="h-32 w-full">
+                                <canvas id="heroMiniChart"></canvas>
+                            </div>
+                        </div>
+
+                        <p class="text-[11px] text-slate-400 italic text-center mt-3">
+                            <i class="fa-solid fa-lock text-brand-accent mr-1"></i> All displayed portfolio analytics use sanitized sample data.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- 2. ABOUT ME -->
+    <section id="about" class="py-20 border-b border-brand-border/40 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-xs font-mono text-brand-accent uppercase tracking-widest mb-2">Introduction & Story</h2>
+                <h3 class="text-3xl font-extrabold text-white">From Quality Control to Intelligent Automation</h3>
+                <p class="text-slate-400 text-sm mt-3">
+                    Combining quality assurance, data analysis, reporting, and process improvement to bridge the gap between operations and tech.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+                
+                <!-- Headshot / Visual Card -->
+                <div class="lg:col-span-5 flex justify-center">
+                    <div class="relative group max-w-sm w-full">
+                        <div class="absolute -inset-1 rounded-2xl bg-gradient-to-r from-brand-accent to-amber-600 opacity-30 group-hover:opacity-60 transition blur-lg"></div>
+                        <div class="relative bg-brand-card p-4 rounded-2xl border border-brand-border text-center space-y-4">
+                            <!-- Image Container -->
+                            <div class="overflow-hidden rounded-xl bg-brand-dark border border-brand-border aspect-square flex items-center justify-center relative">
+                                <img src="https://lh3.googleusercontent.com/d/1Gec24mjkxrve5KbR7Qww7tBVmfiT_zSI" alt="Mark Jayson Santos - Headshot" class="w-full h-full object-cover hover:scale-105 transition duration-500" onerror="this.onerror=null; this.src='https://drive.google.com/uc?export=view&id=1Gec24mjkxrve5KbR7Qww7tBVmfiT_zSI';">
+                                <div class="absolute bottom-2 left-2 right-2 px-3 py-1 bg-brand-dark/80 backdrop-blur-md rounded border border-brand-border text-[11px] font-mono text-brand-accent">
+                                    Mark Jayson Santos • Senior QC Analyst
+                                </div>
+                            </div>
+                            <div class="text-left space-y-1">
+                                <div class="text-xs font-bold text-white">Current Focus:</div>
+                                <div class="text-xs text-slate-300">Senior Quality Control, Catastrophe Risk Analytics & Power Platform AI Automation</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Text Content & Career Direction -->
+                <div class="lg:col-span-7 space-y-6">
+                    <div class="bg-brand-card p-6 rounded-2xl border border-brand-border space-y-4">
+                        <h4 class="text-xl font-bold text-white flex items-center gap-2">
+                            <i class="fa-solid fa-user-gear text-brand-accent"></i> Who I Am
+                        </h4>
+                        <p class="text-slate-300 text-sm leading-relaxed">
+                            I’m a <strong>Senior Quality Control Analyst</strong> at Sales Rain - Xceedance with a rich background in catastrophe modeling, data analytics, business intelligence, and process automation starting from 2021.
+                        </p>
+                        <p class="text-slate-300 text-sm leading-relaxed">
+                            My dual perspective allows me to understand the operational requirements, data integrity standards, and technical pipeline—enabling me to transform complex processes into automated, data-driven workflows.
+                        </p>
+                    </div>
+
+                    <!-- Career Direction Flow -->
+                    <div class="bg-brand-card p-6 rounded-2xl border border-brand-border space-y-4">
+                        <h4 class="text-base font-bold text-white flex items-center gap-2">
+                            <i class="fa-solid fa-compass text-brand-accent"></i> Key Milestones (2021 – Present)
+                        </h4>
+
+                        <div class="grid grid-cols-1 sm:grid-cols-4 gap-3 text-center">
+                            <div class="p-3 rounded-xl bg-brand-dark border border-brand-border hover:border-brand-accent transition">
+                                <i class="fa-solid fa-chalkboard-user text-slate-400 mb-1 block"></i>
+                                <div class="text-xs font-bold text-white">College Instructor</div>
+                                <span class="text-[10px] text-brand-muted">Feb 2021 – Jun 2021</span>
+                            </div>
+                            <div class="p-3 rounded-xl bg-brand-dark border border-brand-border hover:border-brand-accent transition">
+                                <i class="fa-solid fa-cloud-bolt text-brand-cyan mb-1 block"></i>
+                                <div class="text-xs font-bold text-white">CAT Data Analyst</div>
+                                <span class="text-[10px] text-brand-muted">Aug 2021 – Mar 2024</span>
+                            </div>
+                            <div class="p-3 rounded-xl bg-brand-dark border border-brand-border hover:border-brand-accent transition">
+                                <i class="fa-solid fa-list-check text-amber-400 mb-1 block"></i>
+                                <div class="text-xs font-bold text-white">Mid QC Analyst</div>
+                                <span class="text-[10px] text-brand-muted">Apr 2024 – Mar 2026</span>
+                            </div>
+                            <div class="p-3 rounded-xl bg-brand-dark border border-brand-border hover:border-brand-accent transition">
+                                <i class="fa-solid fa-user-shield text-emerald-400 mb-1 block"></i>
+                                <div class="text-xs font-bold text-white">Senior QC Analyst</div>
+                                <span class="text-[10px] text-emerald-400 font-bold">Apr 2026 – Present</span>
+                            </div>
+                        </div>
+
+                        <p class="text-xs text-slate-400 pt-2 border-t border-brand-border/60">
+                            <strong>Goal:</strong> Drive enterprise data quality, automate repetitive operations, and implement AI tools for scalable decision-making.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. WORK EXPERIENCE SECTION (DETAILED RESUME TIMELINE FROM 2021 UP TO DATE) -->
+    <section id="experience" class="py-20 border-b border-brand-border/40 bg-brand-dark/30">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-xs font-mono text-brand-accent uppercase tracking-widest mb-2">Career Timeline</h2>
+                <h3 class="text-3xl font-extrabold text-white">Work Experience</h3>
+                <p class="text-slate-400 text-sm mt-3">
+                    A detailed timeline of professional roles and contributions from February 2021 up to the present day.
+                </p>
+            </div>
+
+            <div class="space-y-8 max-w-5xl mx-auto">
+
+                <!-- EXPERIENCE ITEM 1: Sales Rain - Xceedance -->
+                <div class="bg-brand-card rounded-2xl border border-brand-border p-6 sm:p-8 shadow-xl hover:border-brand-accent/50 transition">
+                    <!-- Company Header -->
+                    <div class="flex flex-col sm:flex-row sm:items-center justify-between pb-4 mb-6 border-b border-brand-border gap-2">
+                        <div class="flex items-center gap-3">
+                            <div class="w-12 h-12 rounded-xl bg-amber-500/10 border border-amber-500/30 flex items-center justify-center text-brand-accent text-xl font-bold">
+                                <i class="fa-solid fa-building-user"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-xl font-bold text-white">Sales Rain - Xceedance</h4>
+                                <p class="text-xs font-mono text-brand-accent">Insurance Operational Intelligence & QC</p>
+                            </div>
+                        </div>
+                        <span class="px-3 py-1.5 rounded-full bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 font-mono text-xs font-bold w-fit">
+                            October 2025 – Present
+                        </span>
+                    </div>
+
+                    <!-- Roles inside Sales Rain - Xceedance -->
+                    <div class="space-y-6">
+                        
+                        <!-- Role 1.1: Quality Control Analyst - Senior -->
+                        <div class="relative pl-6 border-l-2 border-brand-accent space-y-3">
+                            <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-1">
+                                <h5 class="text-base font-bold text-white flex items-center gap-2">
+                                    Quality Control Analyst - Senior
+                                    <span class="text-[10px] px-2 py-0.5 rounded bg-emerald-500/20 text-emerald-300 font-mono">CURRENT ROLE</span>
+                                </h5>
+                                <span class="text-xs font-mono text-slate-400">April 2026 – Present</span>
+                            </div>
+                            <ul class="text-xs text-slate-300 space-y-2 list-disc list-inside leading-relaxed">
+                                <li>Lead quality assurance and quality control initiatives across operational processes.</li>
+                                <li>Develop Power BI dashboards, KPI reporting, and workflow automation solutions.</li>
+                                <li>Drive process improvement, compliance monitoring, and data governance initiatives.</li>
+                                <li>Mentor analysts and support strategic QA projects.</li>
+                            </ul>
+                        </div>
+
+                        <!-- Role 1.2: Quality Control Analyst - Mid -->
+                        <div class="relative pl-6 border-l-2 border-brand-border space-y-3">
+                            <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-1">
+                                <h5 class="text-base font-bold text-slate-200">Quality Control Analyst - Mid</h5>
+                                <span class="text-xs font-mono text-slate-400">October 2025 – March 2026</span>
+                            </div>
+                            <ul class="text-xs text-slate-300 space-y-2 list-disc list-inside leading-relaxed">
+                                <li>Performed quality assurance reviews and validation checks on operational datasets to ensure compliance with business standards and regulatory requirements.</li>
+                                <li>Developed automated quality control solutions using Excel, Power Automate, Microsoft Forms, and SharePoint, reducing manual effort and improving process efficiency.</li>
+                                <li>Designed and maintained performance dashboards and KPI reporting solutions for management and operational stakeholders.</li>
+                                <li>Analyzed quality trends, identified process gaps, and recommended corrective actions to improve operational performance.</li>
+                                <li>Collaborated with cross-functional teams to resolve data discrepancies and strengthen data governance practices.</li>
+                                <li>Supported continuous improvement initiatives through automation, reporting optimization, and workflow enhancement.</li>
+                            </ul>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- EXPERIENCE ITEM 2: Arch Global Services Philippines Inc. -->
+                <div class="bg-brand-card rounded-2xl border border-brand-border p-6 sm:p-8 shadow-xl hover:border-brand-accent/50 transition">
+                    <!-- Company Header -->
+                    <div class="flex flex-col sm:flex-row sm:items-center justify-between pb-4 mb-6 border-b border-brand-border gap-2">
+                        <div class="flex items-center gap-3">
+                            <div class="w-12 h-12 rounded-xl bg-blue-500/10 border border-blue-500/30 flex items-center justify-center text-blue-400 text-xl font-bold">
+                                <i class="fa-solid fa-cloud-bolt"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-xl font-bold text-white">Arch Global Services Philippines Inc.</h4>
+                                <p class="text-xs font-mono text-blue-400">Quality Control & Catastrophe Risk Analytics</p>
+                            </div>
+                        </div>
+                        <span class="px-3 py-1.5 rounded-full bg-slate-800 border border-brand-border text-slate-300 font-mono text-xs font-semibold w-fit">
+                            August 2021 – September 2025
+                        </span>
+                    </div>
+
+                    <!-- Roles inside Arch Global Services -->
+                    <div class="space-y-6">
+                        
+                        <!-- Role 2.1: Quality Control Analyst - Mid -->
+                        <div class="relative pl-6 border-l-2 border-brand-border space-y-3">
+                            <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-1">
+                                <h5 class="text-base font-bold text-slate-200">Quality Control Analyst - Mid</h5>
+                                <span class="text-xs font-mono text-slate-400">April 2024 – September 2025</span>
+                            </div>
+                            <ul class="text-xs text-slate-300 space-y-2 list-disc list-inside leading-relaxed">
+                                <li>Performed quality assurance reviews and validation checks on operational datasets to ensure compliance with business standards and regulatory requirements.</li>
+                                <li>Developed automated quality control solutions using Excel, Power Automate, Microsoft Forms, and SharePoint, reducing manual effort and improving process efficiency.</li>
+                                <li>Designed and maintained performance dashboards and KPI reporting solutions for management and operational stakeholders.</li>
+                                <li>Analyzed quality trends, identified process gaps, and recommended corrective actions to improve operational performance.</li>
+                                <li>Collaborated with cross-functional teams to resolve data discrepancies and strengthen data governance practices.</li>
+                                <li>Supported continuous improvement initiatives through automation, reporting optimization, and workflow enhancement.</li>
+                            </ul>
+                        </div>
+
+                        <!-- Role 2.2: Catastrophe Modeling Data Analyst - Junior -->
+                        <div class="relative pl-6 border-l-2 border-brand-border space-y-3">
+                            <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-1">
+                                <h5 class="text-base font-bold text-slate-200">Catastrophe Modeling Data Analyst - Junior</h5>
+                                <span class="text-xs font-mono text-slate-400">August 2021 – March 2024</span>
+                            </div>
+                            <ul class="text-xs text-slate-300 space-y-2 list-disc list-inside leading-relaxed">
+                                <li>Analyzed catastrophe exposure data to support risk modeling, underwriting, and business decision-making.</li>
+                                <li>Performed data validation, cleansing, and quality assurance activities on large-scale datasets.</li>
+                                <li>Generated analytical reports and business insights using Excel and reporting tools.</li>
+                                <li>Automated recurring processes and reporting workflows through Power Automate and SharePoint solutions.</li>
+                                <li>Worked with stakeholders to improve data quality, reporting accuracy, and operational efficiency.</li>
+                            </ul>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- EXPERIENCE ITEM 3: STI COLLEGE - San Jose Del Monte -->
+                <div class="bg-brand-card rounded-2xl border border-brand-border p-6 sm:p-8 shadow-xl hover:border-brand-accent/50 transition">
+                    <!-- Company Header -->
+                    <div class="flex flex-col sm:flex-row sm:items-center justify-between pb-4 mb-4 border-b border-brand-border gap-2">
+                        <div class="flex items-center gap-3">
+                            <div class="w-12 h-12 rounded-xl bg-purple-500/10 border border-purple-500/30 flex items-center justify-center text-purple-400 text-xl font-bold">
+                                <i class="fa-solid fa-graduation-cap"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-xl font-bold text-white">STI COLLEGE - San Jose Del Monte</h4>
+                                <p class="text-xs font-mono text-purple-400">Academic & Technical Instruction</p>
+                            </div>
+                        </div>
+                        <span class="px-3 py-1.5 rounded-full bg-slate-800 border border-brand-border text-slate-300 font-mono text-xs font-semibold w-fit">
+                            February 2021 – June 2021
+                        </span>
+                    </div>
+
+                    <div class="relative pl-6 border-l-2 border-brand-border space-y-3">
+                        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-1">
+                            <h5 class="text-base font-bold text-slate-200">College Instructor</h5>
+                            <span class="text-xs font-mono text-slate-400">February 2021 – June 2021</span>
+                        </div>
+                        <ul class="text-xs text-slate-300 space-y-2 list-disc list-inside leading-relaxed">
+                            <li>Delivered instruction in Computer Engineering, Programming, Data Analytics, and Information Technology subjects.</li>
+                            <li>Developed practical learning exercises utilizing Python, Power BI, Microsoft Office, and Arduino technologies.</li>
+                            <li>Evaluated student projects through data-driven and project-based assessment methodologies.</li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- 4. DATA ANALYTICS -->
+    <section id="analytics" class="py-20 border-b border-brand-border/40 bg-brand-dark/50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <div class="flex flex-col md:flex-row md:items-end justify-between mb-12">
+                <div>
+                    <h2 class="text-xs font-mono text-brand-accent uppercase tracking-widest mb-2">Core Competency 01</h2>
+                    <h3 class="text-3xl font-extrabold text-white">Data Analytics & Business Intelligence</h3>
+                    <p class="text-slate-400 text-sm mt-2 max-w-2xl">
+                        Turning operational data into decisions through Power BI modeling, DAX, and SQL data pipelines.
+                    </p>
+                </div>
+                <div class="mt-4 md:mt-0 font-mono text-xs text-brand-accent bg-brand-accent/10 px-3 py-1.5 rounded-lg border border-brand-accent/20">
+                    <i class="fa-solid fa-database mr-1"></i> Power BI • DAX • SQL • Excel
+                </div>
+            </div>
+
+            <!-- Core Skills Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+                
+                <div class="p-5 rounded-2xl bg-brand-card border border-brand-border glow-card transition space-y-3">
+                    <div class="w-10 h-10 rounded-lg bg-amber-500/20 flex items-center justify-center text-brand-accent font-bold text-lg">
+                        <i class="fa-solid fa-chart-column"></i>
+                    </div>
+                    <h4 class="text-base font-bold text-white">Power BI</h4>
+                    <ul class="text-xs text-slate-300 space-y-1.5 list-disc list-inside">
+                        <li>Dashboard development</li>
+                        <li>Complex DAX modeling</li>
+                        <li>KPI & executive metric design</li>
+                        <li>Interactive drill-down reports</li>
+                    </ul>
+                </div>
+
+                <div class="p-5 rounded-2xl bg-brand-card border border-brand-border glow-card transition space-y-3">
+                    <div class="w-10 h-10 rounded-lg bg-blue-500/20 flex items-center justify-center text-blue-400 font-bold text-lg">
+                        <i class="fa-solid fa-code"></i>
+                    </div>
+                    <h4 class="text-base font-bold text-white">SQL</h4>
+                    <ul class="text-xs text-slate-300 space-y-1.5 list-disc list-inside">
+                        <li>Data extraction & queries</li>
+                        <li>Filtering & transformation</li>
+                        <li>Aggregation & joining</li>
+                        <li>Data validation & audit</li>
+                    </ul>
+                </div>
+
+                <div class="p-5 rounded-2xl bg-brand-card border border-brand-border glow-card transition space-y-3">
+                    <div class="w-10 h-10 rounded-lg bg-green-500/20 flex items-center justify-center text-green-400 font-bold text-lg">
+                        <i class="fa-solid fa-file-excel"></i>
+                    </div>
+                    <h4 class="text-base font-bold text-white">Excel Advanced</h4>
+                    <ul class="text-xs text-slate-300 space-y-1.5 list-disc list-inside">
+                        <li>Advanced data modeling</li>
+                        <li>XLOOKUP & complex formulas</li>
+                        <li>Pivot tables & summaries</li>
+                        <li>Data cleanup & preparation</li>
+                    </ul>
+                </div>
+
+                <div class="p-5 rounded-2xl bg-brand-card border border-brand-border glow-card transition space-y-3">
+                    <div class="w-10 h-10 rounded-lg bg-purple-500/20 flex items-center justify-center text-purple-400 font-bold text-lg">
+                        <i class="fa-solid fa-filter"></i>
+                    </div>
+                    <h4 class="text-base font-bold text-white">Power Query</h4>
+                    <ul class="text-xs text-slate-300 space-y-1.5 list-disc list-inside">
+                        <li>ETL data transformation</li>
+                        <li>Data restructuring</li>
+                        <li>Automated refresh setup</li>
+                        <li>Multi-source data joining</li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <!-- Featured Analytical Project Showcase: Interactive Dashboard Frame -->
+            <div class="bg-brand-card rounded-2xl border border-brand-border p-6 shadow-xl space-y-6">
+                <div class="flex flex-col sm:flex-row justify-between sm:items-center gap-4 pb-4 border-b border-brand-border">
+                    <div>
+                        <span class="text-xs font-mono text-brand-accent">FEATURED ANALYTICAL PROJECT</span>
+                        <h4 class="text-xl font-bold text-white">QC Performance Analytics Dashboard</h4>
+                    </div>
+                    <div class="flex flex-wrap gap-2 text-xs font-mono">
+                        <span class="px-2.5 py-1 rounded bg-brand-dark border border-brand-border text-slate-300">Power BI</span>
+                        <span class="px-2.5 py-1 rounded bg-brand-dark border border-brand-border text-slate-300">DAX</span>
+                        <span class="px-2.5 py-1 rounded bg-brand-dark border border-brand-border text-slate-300">Power Query</span>
+                    </div>
+                </div>
+
+                <!-- Interactive Chart Container mimicking Power BI view -->
+                <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+                    <div class="lg:col-span-2 bg-brand-dark p-4 rounded-xl border border-brand-border space-y-3">
+                        <div class="flex justify-between items-center text-xs text-slate-400 font-mono">
+                            <span>Quality Performance & Audit Volume Trends</span>
+                            <span>Interactive Live Preview</span>
+                        </div>
+                        <div class="h-64 w-full">
+                            <canvas id="qcMainDashboardChart"></canvas>
+                        </div>
+                    </div>
+
+                    <div class="space-y-4 text-xs text-slate-300">
+                        <div class="p-4 rounded-xl bg-brand-dark border border-brand-border space-y-2">
+                            <span class="font-bold text-white block text-sm">Problem (Before)</span>
+                            <p>Quality data was spread across fragmented sources, making operational visibility slow and inconsistent.</p>
+                        </div>
+                        <div class="p-4 rounded-xl bg-brand-dark border border-brand-border space-y-2">
+                            <span class="font-bold text-brand-accent block text-sm">Solution</span>
+                            <p>Built a centralized analytical view connecting audit findings, volume, line-of-business trends, and individual performance.</p>
+                        </div>
+                        <div class="p-4 rounded-xl bg-brand-dark border border-brand-border space-y-2">
+                            <span class="font-bold text-green-400 block text-sm">Business Result</span>
+                            <p>Delivered a structured standard for daily KPI tracking, reducing manual report compilation and enabling data-driven discussions.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- 5. CATASTROPHE MODELING -->
+    <section id="cat-modeling" class="py-20 border-b border-brand-border/40">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-xs font-mono text-brand-accent uppercase tracking-widest mb-2">Domain Focus</h2>
+                <h3 class="text-3xl font-extrabold text-white">Insurance & Catastrophe Risk Analytics</h3>
+                <p class="text-slate-400 text-sm mt-3">
+                    Applying analytical rigor and data quality controls to natural perils and catastrophe exposure data.
+                </p>
+            </div>
+
+            <!-- Natural Peril Cards Grid -->
+            <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4 mb-12">
+                <div class="p-4 rounded-xl bg-brand-card border border-brand-border text-center space-y-2 hover:border-brand-accent transition">
+                    <i class="fa-solid fa-hurricane text-2xl text-cyan-400"></i>
+                    <div class="text-xs font-bold text-white">Hurricanes / Typhoons</div>
+                </div>
+                <div class="p-4 rounded-xl bg-brand-card border border-brand-border text-center space-y-2 hover:border-brand-accent transition">
+                    <i class="fa-solid fa-house-crack text-2xl text-amber-400"></i>
+                    <div class="text-xs font-bold text-white">Earthquakes</div>
+                </div>
+                <div class="p-4 rounded-xl bg-brand-card border border-brand-border text-center space-y-2 hover:border-brand-accent transition">
+                    <i class="fa-solid fa-water text-2xl text-blue-400"></i>
+                    <div class="text-xs font-bold text-white">Floods</div>
+                </div>
+                <div class="p-4 rounded-xl bg-brand-card border border-brand-border text-center space-y-2 hover:border-brand-accent transition">
+                    <i class="fa-solid fa-cloud-bolt text-2xl text-yellow-400"></i>
+                    <div class="text-xs font-bold text-white">Severe Storms</div>
+                </div>
+                <div class="p-4 rounded-xl bg-brand-card border border-brand-border text-center space-y-2 hover:border-brand-accent transition col-span-2 sm:col-span-1">
+                    <i class="fa-solid fa-fire text-2xl text-red-400"></i>
+                    <div class="text-xs font-bold text-white">Wildfires</div>
+                </div>
+            </div>
+
+            <!-- Areas Developing & Flow Diagram -->
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-stretch">
+                
+                <div class="bg-brand-card p-6 rounded-2xl border border-brand-border space-y-4">
+                    <h4 class="text-lg font-bold text-white flex items-center gap-2">
+                        <i class="fa-solid fa-layer-group text-brand-accent"></i> Key Areas I'm Developing
+                    </h4>
+
+                    <div class="space-y-3 text-xs text-slate-300">
+                        <div class="p-3 rounded-lg bg-brand-dark border border-brand-border">
+                            <span class="font-bold text-brand-accent block mb-1">Exposure Data Validation</span>
+                            Understanding how policy, location, and building characteristic data directly affect catastrophe risk assessment.
+                        </div>
+                        <div class="p-3 rounded-lg bg-brand-dark border border-brand-border">
+                            <span class="font-bold text-brand-accent block mb-1">Data Quality Standards</span>
+                            Applying systematic quality control checks to clean, format, and audit large modeling input files.
+                        </div>
+                        <div class="p-3 rounded-lg bg-brand-dark border border-brand-border">
+                            <span class="font-bold text-brand-accent block mb-1">Risk Analytics & Reporting</span>
+                            Leveraging visualization tools to make exposure results and catastrophe risk summaries intuitive for business teams.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Analytical Flowchart -->
+                <div class="bg-brand-card p-6 rounded-2xl border border-brand-border space-y-4 flex flex-col justify-between">
+                    <h4 class="text-lg font-bold text-white flex items-center gap-2">
+                        <i class="fa-solid fa-diagram-project text-brand-accent"></i> My Analytical Approach
+                    </h4>
+
+                    <div class="space-y-2 text-xs font-mono">
+                        <div class="p-3 rounded-lg bg-brand-dark border border-brand-border flex items-center justify-between">
+                            <span class="text-slate-300">1. DATA INPUT</span>
+                            <span class="text-brand-accent">Exposure / Policy Information</span>
+                        </div>
+                        <div class="text-center text-slate-500"><i class="fa-solid fa-arrow-down"></i></div>
+                        <div class="p-3 rounded-lg bg-brand-dark border border-brand-border flex items-center justify-between">
+                            <span class="text-slate-300">2. QUALITY CONTROL</span>
+                            <span class="text-amber-400">Validation & Data Checks</span>
+                        </div>
+                        <div class="text-center text-slate-500"><i class="fa-solid fa-arrow-down"></i></div>
+                        <div class="p-3 rounded-lg bg-brand-dark border border-brand-border flex items-center justify-between">
+                            <span class="text-slate-300">3. ANALYSIS</span>
+                            <span class="text-brand-cyan">Risk & Portfolio Insights</span>
+                        </div>
+                        <div class="text-center text-slate-500"><i class="fa-solid fa-arrow-down"></i></div>
+                        <div class="p-3 rounded-lg bg-brand-dark border border-brand-border flex items-center justify-between">
+                            <span class="text-slate-300">4. VISUALIZATION</span>
+                            <span class="text-green-400">Dashboards & Actionable Reports</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- 6. QUALITY CONTROL ANALYTICS -->
+    <section id="qc-analytics" class="py-20 border-b border-brand-border/40 bg-brand-dark/50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-xs font-mono text-brand-accent uppercase tracking-widest mb-2">Methodology</h2>
+                <h3 class="text-3xl font-extrabold text-white">Quality Control Meets Data Analytics</h3>
+                <p class="text-slate-400 text-sm mt-3">
+                    Quality control is more than identifying errors—it is about discovering patterns, root causes, and systemic process improvements.
+                </p>
+            </div>
+
+            <!-- QC Framework Visual Steps -->
+            <div class="grid grid-cols-1 sm:grid-cols-5 gap-4 mb-12 text-center text-xs">
+                <div class="p-4 rounded-xl bg-brand-card border border-brand-border space-y-2">
+                    <div class="w-8 h-8 rounded-full bg-amber-500/20 text-brand-accent mx-auto flex items-center justify-center font-bold">1</div>
+                    <div class="font-bold text-white">AUDIT</div>
+                    <div class="text-brand-muted text-[11px]">Collect quality audit results</div>
+                </div>
+                <div class="p-4 rounded-xl bg-brand-card border border-brand-border space-y-2">
+                    <div class="w-8 h-8 rounded-full bg-amber-500/20 text-brand-accent mx-auto flex items-center justify-center font-bold">2</div>
+                    <div class="font-bold text-white">ANALYZE</div>
+                    <div class="text-brand-muted text-[11px]">Identify trends & error patterns</div>
+                </div>
+                <div class="p-4 rounded-xl bg-brand-card border border-brand-border space-y-2">
+                    <div class="w-8 h-8 rounded-full bg-amber-500/20 text-brand-accent mx-auto flex items-center justify-center font-bold">3</div>
+                    <div class="font-bold text-white">DIAGNOSE</div>
+                    <div class="text-brand-muted text-[11px]">Understand recurring causes</div>
+                </div>
+                <div class="p-4 rounded-xl bg-brand-card border border-brand-border space-y-2">
+                    <div class="w-8 h-8 rounded-full bg-amber-500/20 text-brand-accent mx-auto flex items-center justify-center font-bold">4</div>
+                    <div class="font-bold text-white">IMPROVE</div>
+                    <div class="text-brand-muted text-[11px]">Target training & workflow fixes</div>
+                </div>
+                <div class="p-4 rounded-xl bg-brand-card border border-brand-border space-y-2">
+                    <div class="w-8 h-8 rounded-full bg-amber-500/20 text-brand-accent mx-auto flex items-center justify-center font-bold">5</div>
+                    <div class="font-bold text-white">MONITOR</div>
+                    <div class="text-brand-muted text-[11px]">Track long-term quality gains</div>
+                </div>
+            </div>
+
+            <!-- Philosophy Callout -->
+            <div class="bg-gradient-to-r from-brand-card via-brand-card to-amber-950/30 p-8 rounded-2xl border border-brand-accent/30 text-center space-y-3">
+                <i class="fa-solid fa-quote-left text-2xl text-brand-accent"></i>
+                <p class="text-lg sm:text-xl font-medium text-slate-200 max-w-3xl mx-auto italic">
+                    "Quality data should not only tell us what went wrong. It should help us understand how to make the process better."
+                </p>
+                <div class="text-xs font-mono text-brand-accent">— Mark Jayson Santos</div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- 7. AI & AUTOMATION -->
+    <section id="ai-automation" class="py-20 border-b border-brand-border/40">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-xs font-mono text-brand-accent uppercase tracking-widest mb-2">Digital Transformation</h2>
+                <h3 class="text-3xl font-extrabold text-white">From Manual Processes to Intelligent Automation</h3>
+                <p class="text-slate-400 text-sm mt-3">
+                    Combining quality control and data analytics with AI and automated Microsoft 365 / Power Automate solutions.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+                
+                <div class="lg:col-span-7 space-y-6">
+                    <div class="bg-brand-card p-6 rounded-2xl border border-brand-border space-y-4">
+                        <h4 class="text-xl font-bold text-white flex items-center gap-2">
+                            <i class="fa-solid fa-wand-magic-sparkles text-brand-accent"></i> The Automation Journey
+                        </h4>
+
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-xs">
+                            <div class="p-4 rounded-xl bg-brand-dark border border-brand-border">
+                                <span class="text-brand-muted font-mono block mb-1">PHASE 01: MANUAL</span>
+                                <div class="font-bold text-white mb-1">Repetitive QC Activities</div>
+                                <p class="text-slate-400">Manual review logging, manual calculations, dispersed documentation.</p>
+                            </div>
+                            <div class="p-4 rounded-xl bg-brand-dark border border-brand-border">
+                                <span class="text-brand-accent font-mono block mb-1">PHASE 02: AUTOMATION</span>
+                                <div class="font-bold text-white mb-1">Workflow Solutions</div>
+                                <p class="text-slate-400">Power Automate flows, SharePoint lists, automatic alerts & assignments.</p>
+                            </div>
+                            <div class="p-4 rounded-xl bg-brand-dark border border-brand-border">
+                                <span class="text-amber-400 font-mono block mb-1">PHASE 03: INTELLIGENCE</span>
+                                <div class="font-bold text-white mb-1">AI-Assisted Processing</div>
+                                <p class="text-slate-400">AI Knowledge Assistant, Copilot integration, automatic standard matching.</p>
+                            </div>
+                            <div class="p-4 rounded-xl bg-brand-dark border border-brand-border">
+                                <span class="text-green-400 font-mono block mb-1">PHASE 04: INSIGHT</span>
+                                <div class="font-bold text-white mb-1">Data-Driven Decisioning</div>
+                                <p class="text-slate-400">Reduced manual fatigue, instant process lookup, continuous quality gains.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Personal Impact Summary -->
+                <div class="lg:col-span-5 bg-brand-card p-6 rounded-2xl border border-brand-border space-y-4">
+                    <h4 class="text-lg font-bold text-white">Personal Impact & Philosophy</h4>
+                    <p class="text-xs text-slate-300 leading-relaxed">
+                        For me, AI automation isn’t simply about replacing manual work—it’s about <strong>giving people better tools</strong>.
+                    </p>
+                    <ul class="text-xs text-slate-300 space-y-2 list-disc list-inside">
+                        <li>Reduce repetitive, error-prone manual tasks</li>
+                        <li>Ensure consistent application of quality standards</li>
+                        <li>Make approved documentation instantly searchable</li>
+                        <li>Give analysts more bandwidth for high-value judgment</li>
+                    </ul>
+                    <div class="p-3 rounded-xl bg-brand-accent/10 border border-brand-accent/30 text-brand-accent text-xs">
+                        <i class="fa-solid fa-graduation-cap mr-1"></i> <strong>Automation Certifications:</strong> Intelligent Automation Basics, Process Optimization Basics, Generative AI & Power Platform Fundamentals.
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- 8. PROJECTS SECTION -->
+    <section id="projects" class="py-20 border-b border-brand-border/40 bg-brand-dark/50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-xs font-mono text-brand-accent uppercase tracking-widest mb-2">Proof of Impact</h2>
+                <h3 class="text-3xl font-extrabold text-white">Featured Portfolio Projects</h3>
+                <p class="text-slate-400 text-sm mt-3">
+                    Demonstrating real problem-solving across Data Analytics, Knowledge Systems, and Workflow Automation.
+                </p>
+            </div>
+
+            <!-- Project Cards Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                
+                <!-- Project 01 -->
+                <div class="bg-brand-card rounded-2xl border border-brand-border p-6 glow-card transition flex flex-col justify-between space-y-4">
+                    <div>
+                        <div class="flex justify-between items-center mb-3">
+                            <span class="text-xs font-mono text-brand-accent">PROJECT 01</span>
+                            <span class="px-2 py-0.5 rounded bg-amber-500/10 text-amber-400 text-[10px] font-mono border border-amber-500/20">Power BI & DAX</span>
+                        </div>
+                        <h4 class="text-xl font-bold text-white mb-2">QC Dashboard 2026</h4>
+                        <p class="text-xs text-slate-300 leading-relaxed mb-4">
+                            Centralized analytical platform designed to analyze quality scores, productivity, line-of-business trends, and individual analyst performance in real time.
+                        </p>
+                        <div class="space-y-1.5 text-xs text-slate-400">
+                            <div><strong class="text-slate-200">Highlights:</strong> Executive KPI reporting, LOB analysis, quality monitoring, drill-down filtering.</div>
+                            <div><strong class="text-slate-200">Tools:</strong> Power BI, DAX, Power Query, SharePoint, Excel</div>
+                        </div>
+                    </div>
+                    <div class="pt-4 border-t border-brand-border flex justify-between items-center text-xs font-mono">
+                        <span class="text-brand-muted">Data Analytics & QC</span>
+                        <span class="text-brand-accent font-semibold">Sanitized Sample Data</span>
+                    </div>
+                </div>
+
+                <!-- Project 02 -->
+                <div class="bg-brand-card rounded-2xl border border-brand-border p-6 glow-card transition flex flex-col justify-between space-y-4">
+                    <div>
+                        <div class="flex justify-between items-center mb-3">
+                            <span class="text-xs font-mono text-amber-400">PROJECT 02</span>
+                            <span class="px-2 py-0.5 rounded bg-purple-500/10 text-purple-400 text-[10px] font-mono border border-purple-500/20">AI + Knowledge System</span>
+                        </div>
+                        <h4 class="text-xl font-bold text-white mb-2">QC Process Assistant Concept</h4>
+                        <p class="text-xs text-slate-300 leading-relaxed mb-4">
+                            An AI-assisted knowledge search solution to help team members quickly access approved process standards, guidelines, and complex audit scenario rules.
+                        </p>
+                        <div class="space-y-1.5 text-xs text-slate-400">
+                            <div><strong class="text-slate-200">Architecture:</strong> SharePoint Docs → AI / Copilot → Power Automate → User Interface</div>
+                            <div><strong class="text-slate-200">Objective:</strong> Reduce repetitive queries and manual info retrieval time.</div>
+                        </div>
+                    </div>
+                    <div class="pt-4 border-t border-brand-border flex justify-between items-center text-xs font-mono">
+                        <span class="text-brand-muted">AI & Knowledge Mgmt</span>
+                        <span class="text-amber-400 font-semibold">Automation Concept</span>
+                    </div>
+                </div>
+
+                <!-- Project 03 -->
+                <div class="bg-brand-card rounded-2xl border border-brand-border p-6 glow-card transition flex flex-col justify-between space-y-4">
+                    <div>
+                        <div class="flex justify-between items-center mb-3">
+                            <span class="text-xs font-mono text-cyan-400">PROJECT 03</span>
+                            <span class="px-2 py-0.5 rounded bg-cyan-500/10 text-cyan-400 text-[10px] font-mono border border-cyan-500/20">Power Automate</span>
+                        </div>
+                        <h4 class="text-xl font-bold text-white mb-2">QC Workflow Automation Flow</h4>
+                        <p class="text-xs text-slate-300 leading-relaxed mb-4">
+                            End-to-end automated workflow for managing audit assignments, team notifications, approval loops, and documentation updates across Microsoft Teams & Outlook.
+                        </p>
+                        <div class="space-y-1.5 text-xs text-slate-400">
+                            <div><strong class="text-slate-200">Key Features:</strong> Automated notifications, status tracking, structured forms, email parsing.</div>
+                            <div><strong class="text-slate-200">Tools:</strong> Power Automate, MS Teams, SharePoint, Outlook</div>
+                        </div>
+                    </div>
+                    <div class="pt-4 border-t border-brand-border flex justify-between items-center text-xs font-mono">
+                        <span class="text-brand-muted">Process Automation</span>
+                        <span class="text-cyan-400 font-semibold">Workflow Solution</span>
+                    </div>
+                </div>
+
+                <!-- Project 04 -->
+                <div class="bg-brand-card rounded-2xl border border-brand-border p-6 glow-card transition flex flex-col justify-between space-y-4">
+                    <div>
+                        <div class="flex justify-between items-center mb-3">
+                            <span class="text-xs font-mono text-green-400">PROJECT 04</span>
+                            <span class="px-2 py-0.5 rounded bg-green-500/10 text-green-400 text-[10px] font-mono border border-green-500/20">Capacity & Operations</span>
+                        </div>
+                        <h4 class="text-xl font-bold text-white mb-2">Analyst Capacity & Utilization Dashboard</h4>
+                        <p class="text-xs text-slate-300 leading-relaxed mb-4">
+                            Operational management view evaluating analyst throughput, resource utilization, task allocation, and expected work hours versus actual completion.
+                        </p>
+                        <div class="space-y-1.5 text-xs text-slate-400">
+                            <div><strong class="text-slate-200">Goal:</strong> Provide leadership with actionable operational capacity planning tools.</div>
+                            <div><strong class="text-slate-200">Tools:</strong> Power BI, DAX, Excel modeling</div>
+                        </div>
+                    </div>
+                    <div class="pt-4 border-t border-brand-border flex justify-between items-center text-xs font-mono">
+                        <span class="text-brand-muted">Capacity Planning</span>
+                        <span class="text-green-400 font-semibold">Operations BI</span>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- 9. TECHNICAL SKILLS -->
+    <section id="skills" class="py-20 border-b border-brand-border/40">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-xs font-mono text-brand-accent uppercase tracking-widest mb-2">Capability Matrix</h2>
+                <h3 class="text-3xl font-extrabold text-white">Technical Stack & Expertise</h3>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                
+                <div class="bg-brand-card p-6 rounded-2xl border border-brand-border space-y-3">
+                    <div class="flex items-center gap-3">
+                        <i class="fa-solid fa-chart-pie text-brand-accent text-xl"></i>
+                        <h4 class="font-bold text-white text-base">Business Intelligence</h4>
+                    </div>
+                    <div class="space-y-2 text-xs text-slate-300 pt-2 border-t border-brand-border">
+                        <div class="flex justify-between"><strong>Power BI</strong> <span>Advanced / DAX</span></div>
+                        <div class="flex justify-between"><strong>Excel</strong> <span>Advanced Data Modeling</span></div>
+                        <div class="flex justify-between"><strong>KPI Design</strong> <span>Executive Dashboarding</span></div>
+                    </div>
+                </div>
+
+                <div class="bg-brand-card p-6 rounded-2xl border border-brand-border space-y-3">
+                    <div class="flex items-center gap-3">
+                        <i class="fa-solid fa-database text-blue-400 text-xl"></i>
+                        <h4 class="font-bold text-white text-base">Data Management</h4>
+                    </div>
+                    <div class="space-y-2 text-xs text-slate-300 pt-2 border-t border-brand-border">
+                        <div class="flex justify-between"><strong>SQL</strong> <span>Queries & Extraction</span></div>
+                        <div class="flex justify-between"><strong>Power Query</strong> <span>ETL Transformation</span></div>
+                        <div class="flex justify-between"><strong>Data Validation</strong> <span>Auditing & Quality</span></div>
+                    </div>
+                </div>
+
+                <div class="bg-brand-card p-6 rounded-2xl border border-brand-border space-y-3">
+                    <div class="flex items-center gap-3">
+                        <i class="fa-solid fa-gears text-amber-400 text-xl"></i>
+                        <h4 class="font-bold text-white text-base">Automation & Microsoft 365</h4>
+                    </div>
+                    <div class="space-y-2 text-xs text-slate-300 pt-2 border-t border-brand-border">
+                        <div class="flex justify-between"><strong>Power Automate</strong> <span>Workflow Automation</span></div>
+                        <div class="flex justify-between"><strong>SharePoint</strong> <span>Lists & Architecture</span></div>
+                        <div class="flex justify-between"><strong>MS Forms / Teams</strong> <span>Digital Solutions</span></div>
+                    </div>
+                </div>
+
+                <div class="bg-brand-card p-6 rounded-2xl border border-brand-border space-y-3">
+                    <div class="flex items-center gap-3">
+                        <i class="fa-solid fa-brain text-purple-400 text-xl"></i>
+                        <h4 class="font-bold text-white text-base">Programming & AI</h4>
+                    </div>
+                    <div class="space-y-2 text-xs text-slate-300 pt-2 border-t border-brand-border">
+                        <div class="flex justify-between"><strong>Python</strong> <span>Data & Automation</span></div>
+                        <div class="flex justify-between"><strong>Generative AI</strong> <span>Copilot / Assistant Flow</span></div>
+                    </div>
+                </div>
+
+                <div class="bg-brand-card p-6 rounded-2xl border border-brand-border space-y-3 col-span-1 md:col-span-2 lg:col-span-2">
+                    <div class="flex items-center gap-3">
+                        <i class="fa-solid fa-shield-halved text-green-400 text-xl"></i>
+                        <h4 class="font-bold text-white text-base">Insurance & Quality Operations</h4>
+                    </div>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-xs text-slate-300 pt-2 border-t border-brand-border">
+                        <div>
+                            <strong class="text-white block mb-1">Quality Control Analytics</strong>
+                            Operational auditing, error pattern identification, training gap analysis, KPI tracking.
+                        </div>
+                        <div>
+                            <strong class="text-white block mb-1">Catastrophe Modeling Context</strong>
+                            Exposure data validation, policy characteristics check, natural perils risk logic.
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- 10. RESUME SECTION -->
+    <section id="resume" class="py-20 border-b border-brand-border/40 bg-brand-dark/50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 mb-12">
+                <div>
+                    <h2 class="text-xs font-mono text-brand-accent uppercase tracking-widest mb-2">Curriculum Vitae</h2>
+                    <h3 class="text-3xl font-extrabold text-white">Professional Resume</h3>
+                </div>
+                <div class="flex flex-wrap items-center gap-3">
+                    <a href="https://drive.google.com/file/d/1MVhywZZbEjEFEkP6eEDy8A3-Pez3IwT_/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="px-5 py-2.5 rounded-xl bg-brand-accent hover:bg-brand-accentHover text-black font-bold text-xs shadow-md transition flex items-center gap-2">
+                        <i class="fa-solid fa-eye"></i> View PDF in Google Drive
+                    </a>
+                    <a href="https://drive.google.com/uc?export=download&id=1MVhywZZbEjEFEkP6eEDy8A3-Pez3IwT_" target="_blank" rel="noopener noreferrer" class="px-5 py-2.5 rounded-xl bg-brand-card hover:bg-brand-border border border-brand-border text-slate-200 font-semibold text-xs transition flex items-center gap-2">
+                        <i class="fa-solid fa-download"></i> Direct Download
+                    </a>
+                </div>
+            </div>
+
+            <!-- Resume Content Card -->
+            <div class="bg-brand-card p-8 rounded-2xl border border-brand-border space-y-8 max-w-4xl mx-auto text-slate-200">
+                
+                <!-- Resume Header -->
+                <div class="border-b border-brand-border pb-6 space-y-2 text-center sm:text-left">
+                    <h2 class="text-2xl font-bold text-white">MARK JAYSON SANTOS</h2>
+                    <p class="text-sm text-brand-accent font-mono">San Mateo, Norzagaray, Bulacan 3013 | +(63)9105434704 | markoliquinosantos@gmail.com</p>
+                    <p class="text-xs text-slate-400">Senior Quality Control Analyst • Specialized in Data Quality, Power BI, Power Automate & AI Solutions</p>
+                </div>
+
+                <!-- Summary -->
+                <div class="space-y-2">
+                    <h4 class="text-sm font-bold text-white uppercase tracking-wider text-brand-accent">Professional Summary</h4>
+                    <p class="text-xs leading-relaxed text-slate-300">
+                        Results-driven Quality Assurance and Data Analytics professional with experience in catastrophe modeling, operational quality control, process automation, business intelligence, and data governance. Skilled in data validation, root cause analysis, KPI reporting, dashboard development, workflow automation, and continuous process improvement. Advanced expertise in Microsoft Power BI, Excel, Power Automate, SharePoint, Microsoft Forms, and data visualization.
+                    </p>
+                </div>
+
+                <!-- Complete Experience Timeline -->
+                <div class="space-y-6">
+                    <h4 class="text-sm font-bold text-white uppercase tracking-wider text-brand-accent">Professional Experience</h4>
+                    
+                    <!-- Sales Rain -->
+                    <div class="space-y-3 border-l-2 border-brand-accent pl-4">
+                        <div class="flex justify-between items-baseline text-xs font-bold text-white">
+                            <span class="text-sm font-bold text-white">Sales Rain - Xceedance</span>
+                            <span class="text-brand-accent font-mono">October 2025 – Present</span>
+                        </div>
+                        <div class="space-y-2">
+                            <div class="text-xs font-semibold text-emerald-400">Quality Control Analyst - Senior <span class="text-slate-400 font-mono font-normal">(April 2026 – Present)</span></div>
+                            <ul class="text-xs text-slate-300 space-y-1 list-disc list-inside">
+                                <li>Lead quality assurance and quality control initiatives across operational processes.</li>
+                                <li>Develop Power BI dashboards, KPI reporting, and workflow automation solutions.</li>
+                                <li>Drive process improvement, compliance monitoring, and data governance initiatives.</li>
+                                <li>Mentor analysts and support strategic QA projects.</li>
+                            </ul>
+                        </div>
+                        <div class="space-y-2 pt-1">
+                            <div class="text-xs font-semibold text-slate-200">Quality Control Analyst - Mid <span class="text-slate-400 font-mono font-normal">(October 2025 – March 2026)</span></div>
+                            <ul class="text-xs text-slate-300 space-y-1 list-disc list-inside">
+                                <li>Performed quality assurance reviews and validation checks on operational datasets.</li>
+                                <li>Developed automated QC solutions using Excel, Power Automate, MS Forms, and SharePoint.</li>
+                                <li>Designed and maintained performance dashboards and KPI reporting for stakeholders.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Arch Global Services -->
+                    <div class="space-y-3 border-l-2 border-brand-border pl-4">
+                        <div class="flex justify-between items-baseline text-xs font-bold text-white">
+                            <span class="text-sm font-bold text-white">Arch Global Services Philippines Inc.</span>
+                            <span class="text-brand-muted font-mono">August 2021 – September 2025</span>
+                        </div>
+                        <div class="space-y-2">
+                            <div class="text-xs font-semibold text-slate-200">Quality Control Analyst - Mid <span class="text-slate-400 font-mono font-normal">(April 2024 – September 2025)</span></div>
+                            <ul class="text-xs text-slate-300 space-y-1 list-disc list-inside">
+                                <li>Performed quality assurance reviews and validation checks on operational datasets.</li>
+                                <li>Developed automated quality control solutions using Excel, Power Automate, and SharePoint.</li>
+                                <li>Analyzed quality trends and identified process gaps to recommend corrective actions.</li>
+                            </ul>
+                        </div>
+                        <div class="space-y-2 pt-1">
+                            <div class="text-xs font-semibold text-slate-200">Catastrophe Modeling Data Analyst - Junior <span class="text-slate-400 font-mono font-normal">(August 2021 – March 2024)</span></div>
+                            <ul class="text-xs text-slate-300 space-y-1 list-disc list-inside">
+                                <li>Analyzed catastrophe exposure data to support risk modeling and underwriting.</li>
+                                <li>Performed data validation, cleansing, and quality assurance on large datasets.</li>
+                                <li>Automated recurring reporting workflows through Power Automate and SharePoint.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- STI College -->
+                    <div class="space-y-3 border-l-2 border-brand-border pl-4">
+                        <div class="flex justify-between items-baseline text-xs font-bold text-white">
+                            <span class="text-sm font-bold text-white">STI COLLEGE - San Jose Del Monte</span>
+                            <span class="text-brand-muted font-mono">February 2021 – June 2021</span>
+                        </div>
+                        <div class="space-y-2">
+                            <div class="text-xs font-semibold text-slate-200">College Instructor <span class="text-slate-400 font-mono font-normal">(February 2021 – June 2021)</span></div>
+                            <ul class="text-xs text-slate-300 space-y-1 list-disc list-inside">
+                                <li>Delivered instruction in Computer Engineering, Programming, Data Analytics, and IT.</li>
+                                <li>Developed practical learning exercises using Python, Power BI, MS Office, and Arduino.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Education & Certifications -->
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 pt-4 border-t border-brand-border">
+                    <div class="space-y-2">
+                        <h4 class="text-sm font-bold text-white uppercase tracking-wider text-brand-accent">Education</h4>
+                        <div class="text-xs text-slate-300">
+                            <p class="font-bold text-white">Bachelor of Science in Computer Engineering</p>
+                            <p class="text-slate-400">STI College - Fairview (Graduated: 2019)</p>
+                            <p class="text-[11px] text-amber-400 mt-1"><i class="fa-solid fa-trophy mr-1"></i> Most Outstanding Thesis of the Year (2019)</p>
+                        </div>
+                    </div>
+                    <div class="space-y-2">
+                        <h4 class="text-sm font-bold text-white uppercase tracking-wider text-brand-accent">Recent Certifications (Xceedance 2025-2026)</h4>
+                        <ul class="text-xs text-slate-300 space-y-1 list-disc list-inside">
+                            <li>Intelligent Automation Basics (July 2026)</li>
+                            <li>Process Optimization Basics (July 2026)</li>
+                            <li>Generative AI & Data Analytics Basics (July 2026)</li>
+                            <li>Basics of Insurance Curriculum (Dec 2025)</li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- 11. CONTACT SECTION -->
+    <section id="contact" class="py-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-xs font-mono text-brand-accent uppercase tracking-widest mb-2">Get In Touch</h2>
+                <h3 class="text-3xl font-extrabold text-white">Let's Connect</h3>
+                <p class="text-slate-400 text-sm mt-3">
+                    Interested in opportunities or collaborations related to Data Analytics, Catastrophe Modeling, QC Analytics, or AI Automation?
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+                
+                <!-- Contact Details Card -->
+                <div class="lg:col-span-5 bg-brand-card p-6 rounded-2xl border border-brand-border space-y-6">
+                    <h4 class="text-lg font-bold text-white">Mark Jayson Santos</h4>
+                    <p class="text-xs text-slate-300 leading-relaxed">
+                        Always interested in learning, building, and finding better ways to turn data into meaningful solutions.
+                    </p>
+
+                    <div class="space-y-3 text-xs">
+                        <a href="mailto:markoliquinosantos@gmail.com?subject=Portfolio%20Inquiry" class="flex items-center gap-3 p-3 rounded-lg bg-brand-dark border border-brand-border hover:border-brand-accent transition block">
+                            <i class="fa-solid fa-envelope text-brand-accent text-base"></i>
+                            <div>
+                                <span class="text-slate-400 block text-[10px]">EMAIL (DIRECT MAILTO LINK)</span>
+                                <span class="text-white font-medium">markoliquinosantos@gmail.com</span>
+                            </div>
+                        </a>
+
+                        <a href="https://www.linkedin.com/in/mark-jayson-santos" target="_blank" rel="noopener noreferrer" class="flex items-center gap-3 p-3 rounded-lg bg-brand-dark border border-brand-border hover:border-brand-accent transition block">
+                            <i class="fa-brands fa-linkedin text-blue-400 text-base"></i>
+                            <div>
+                                <span class="text-slate-400 block text-[10px]">LINKEDIN</span>
+                                <span class="text-white font-medium">linkedin.com/in/mark-jayson-santos</span>
+                            </div>
+                        </a>
+
+                        <div class="flex items-center gap-3 p-3 rounded-lg bg-brand-dark border border-brand-border">
+                            <i class="fa-solid fa-building text-amber-400 text-base"></i>
+                            <div>
+                                <span class="text-slate-400 block text-[10px]">CURRENT COMPANY</span>
+                                <span class="text-white font-medium">Sales Rain - Xceedance</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Contact Form -->
+                <div class="lg:col-span-7 bg-brand-card p-6 rounded-2xl border border-brand-border">
+                    <form id="portfolioContactForm" action="https://formspree.io/f/xnpnbezp" method="POST" class="space-y-4">
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                            <div>
+                                <label class="block text-xs font-medium text-slate-300 mb-1">Your Name</label>
+                                <input type="text" id="senderName" name="name" required class="w-full px-3 py-2 rounded-lg bg-brand-dark border border-brand-border text-white text-xs focus:outline-none focus:border-brand-accent" placeholder="Jane Doe">
+                            </div>
+                            <div>
+                                <label class="block text-xs font-medium text-slate-300 mb-1">Your Email</label>
+                                <input type="email" id="senderEmail" name="email" required class="w-full px-3 py-2 rounded-lg bg-brand-dark border border-brand-border text-white text-xs focus:outline-none focus:border-brand-accent" placeholder="jane@company.com">
+                            </div>
+                        </div>
+
+                        <div>
+                            <label class="block text-xs font-medium text-slate-300 mb-1">Subject / Area of Interest</label>
+                            <select id="senderSubject" name="subject" class="w-full px-3 py-2 rounded-lg bg-brand-dark border border-brand-border text-white text-xs focus:outline-none focus:border-brand-accent">
+                                <option>Data Analytics & Power BI</option>
+                                <option>Catastrophe Modeling</option>
+                                <option>Quality Control Analytics</option>
+                                <option>AI & Process Automation</option>
+                                <option>General Inquiry</option>
+                            </select>
+                        </div>
+
+                        <div>
+                            <label class="block text-xs font-medium text-slate-300 mb-1">Message</label>
+                            <textarea id="senderMessage" name="message" rows="4" required class="w-full px-3 py-2 rounded-lg bg-brand-dark border border-brand-border text-white text-xs focus:outline-none focus:border-brand-accent" placeholder="Hi Mark, I saw your portfolio and would like to discuss..."></textarea>
+                        </div>
+
+                        <div class="flex flex-col sm:flex-row gap-3">
+                            <button type="submit" id="submitBtn" class="flex-1 py-3 rounded-xl bg-brand-accent hover:bg-brand-accentHover text-black font-bold text-xs transition shadow-md flex items-center justify-center gap-2">
+                                <i class="fa-solid fa-paper-plane"></i> Send Message
+                            </button>
+                            <a href="mailto:markoliquinosantos@gmail.com" class="px-4 py-3 rounded-xl bg-brand-dark hover:bg-brand-border border border-brand-border text-slate-300 text-xs font-medium text-center transition flex items-center justify-center gap-2">
+                                <i class="fa-solid fa-envelope"></i> Quick Mailto
+                            </a>
+                        </div>
+                    </form>
+                    
+                    <div id="contactNotice" class="hidden mt-4 p-3 rounded-lg bg-green-500/20 text-green-400 text-xs text-center border border-green-500/30">
+                        <i class="fa-solid fa-circle-check mr-1"></i> Thank you! Your message has been sent successfully.
+                    </div>
+                    <div id="contactError" class="hidden mt-4 p-3 rounded-lg bg-red-500/20 text-red-400 text-xs text-center border border-red-500/30">
+                        <i class="fa-solid fa-circle-xmark mr-1"></i> Oops! There was a problem submitting your form. Please try again.
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-8 bg-brand-dark border-t border-brand-border text-center text-xs text-slate-500">
+        <div class="max-w-7xl mx-auto px-4 space-y-2">
+            <p>© 2026 Mark Jayson Santos. Senior Quality Control Analyst Portfolio.</p>
+            <p class="text-[11px] text-slate-600">Sample data and projects for demonstration purposes. All confidential company metrics remain protected.</p>
+        </div>
+    </footer>
+
+    <script>
+        /* Mobile Menu Toggle Logic */
+        const mobileBtn = document.getElementById('mobileMenuBtn');
+        const mobileMenu = document.getElementById('mobileMenu');
+
+        mobileBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        /* Close mobile menu on clicking a link */
+        document.querySelectorAll('#mobileMenu a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+
+        /* Chart.js Visualizations Setup */
+        window.onload = function() {
+            // 1. Mini Hero Chart
+            const heroCtx = document.getElementById('heroMiniChart').getContext('2d');
+            new Chart(heroCtx, {
+                type: 'line',
+                data: {
+                    labels: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'],
+                    datasets: [{
+                        label: 'Quality Score (%)',
+                        data: [98.5, 99.1, 99.4, 99.0, 99.8, 99.9],
+                        borderColor: '#f59e0b',
+                        backgroundColor: 'rgba(245, 158, 11, 0.1)',
+                        fill: true,
+                        tension: 0.4,
+                        borderWidth: 2
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: { legend: { display: false } },
+                    scales: {
+                        x: { grid: { display: false }, ticks: { color: '#64748b', font: { size: 9 } } },
+                        y: { min: 95, max: 100, grid: { color: 'rgba(255,255,255,0.05)' }, ticks: { color: '#64748b', font: { size: 9 } } }
+                    }
+                }
+            });
+
+            // 2. Main QC Analytics Dashboard Chart
+            const qcCtx = document.getElementById('qcMainDashboardChart').getContext('2d');
+            new Chart(qcCtx, {
+                type: 'bar',
+                data: {
+                    labels: ['Dept A (Property)', 'Dept B (Casualty)', 'Dept C (Cat Exposure)', 'Dept D (Claims)', 'Dept E (Operations)'],
+                    datasets: [
+                        {
+                            label: 'Audit Volume',
+                            data: [140, 190, 230, 160, 210],
+                            backgroundColor: 'rgba(36, 42, 61, 0.8)',
+                            borderColor: '#242a3d',
+                            borderWidth: 1
+                        },
+                        {
+                            label: 'Quality Target Score %',
+                            data: [99.2, 98.9, 99.6, 99.1, 99.5],
+                            type: 'line',
+                            borderColor: '#f59e0b',
+                            backgroundColor: '#f59e0b',
+                            yAxisID: 'y1'
+                        }
+                    ]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: { labels: { color: '#94a3b8', font: { size: 10 } } }
+                    },
+                    scales: {
+                        x: { grid: { display: false }, ticks: { color: '#94a3b8', font: { size: 10 } } },
+                        y: {
+                            type: 'linear',
+                            position: 'left',
+                            grid: { color: 'rgba(255,255,255,0.05)' },
+                            ticks: { color: '#94a3b8', font: { size: 10 } }
+                        },
+                        y1: {
+                            type: 'linear',
+                            position: 'right',
+                            min: 95,
+                            max: 100,
+                            grid: { drawOnChartArea: false },
+                            ticks: { color: '#f59e0b', font: { size: 10 } }
+                        }
+                    }
+                }
+            });
+        };
+
+        /* Form Submission Logic */
+        const contactForm = document.getElementById('portfolioContactForm');
+        if (contactForm) {
+            contactForm.addEventListener('submit', async function(e) {
+                e.preventDefault();
+                const submitBtn = document.getElementById('submitBtn');
+                const notice = document.getElementById('contactNotice');
+                const errorNotice = document.getElementById('contactError');
+                
+                notice.classList.add('hidden');
+                errorNotice.classList.add('hidden');
+                
+                const originalBtnText = submitBtn.innerHTML;
+                submitBtn.disabled = true;
+                submitBtn.innerHTML = '<i class="fa-solid fa-spinner animate-spin"></i> Sending...';
+
+                try {
+                    const response = await fetch(contactForm.action, {
+                        method: contactForm.method,
+                        body: new FormData(contactForm),
+                        headers: {
+                            'Accept': 'application/json'
+                        }
+                    });
+
+                    if (response.ok) {
+                        notice.classList.remove('hidden');
+                        contactForm.reset();
+                    } else {
+                        errorNotice.classList.remove('hidden');
+                    }
+                } catch (err) {
+                    errorNotice.classList.remove('hidden');
+                } finally {
+                    submitBtn.disabled = false;
+                    submitBtn.innerHTML = originalBtnText;
+                }
+            });
+        }
+    </script>
+</body>
+</html>
